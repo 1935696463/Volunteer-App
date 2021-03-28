@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.volunteeringapp">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.example.volunteeringapp.Data"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.example.volunteeringapp.LogIn">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.volunteeringapp.Register"> </activity>
+        <activity android:name="com.example.volunteeringapp.Index"> </activity>
+        <activity android:name="com.example.volunteeringapp.MyProfile"> </activity>
+        <activity android:name="com.example.volunteeringapp.ModifyInformation"> </activity>
+        <activity android:name="com.example.volunteeringapp.VolunteeringHistory"> </activity>
+        <activity android:name="com.example.volunteeringapp.ActivityDetail"> </activity>
+        <activity android:name="com.example.volunteeringapp.ChangePassword"> </activity>
+        <activity android:name="com.example.volunteeringapp.VolunteeringTime"> </activity>
+        <activity android:name="com.example.volunteeringapp.SearchActivity"> </activity>
+        <activity android:name="com.example.volunteeringapp.ForgotPassword"> </activity>
+        <activity android:name="com.example.volunteeringapp.PublishActivity"> </activity>
+        <activity android:name="com.example.volunteeringapp.SearchResult"> </activity>
+        <activity android:name="com.example.volunteeringapp.AvailabilityTime"> </activity>
+        <activity android:name="com.example.volunteeringapp.VolunteerManagement"> </activity>
+        <activity android:name="com.example.volunteeringapp.VolunteerDetail"> </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyChQqLVkGhpLnKCMc3UVwcadTIdN-CnsMA" />
+    </application>
+
+</manifest>

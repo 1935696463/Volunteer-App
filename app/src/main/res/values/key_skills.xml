@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="key_skills">
+        <item>Foreign language</item>
+        <item>Computer</item>
+        <item>Painting</item>
+        <item>Singing</item>
+    </string-array>
+</resources>

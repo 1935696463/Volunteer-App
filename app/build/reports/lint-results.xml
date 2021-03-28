@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint 3.6.1">
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        severity="Warning"
+        message="Lint found an issue registry (`androidx.annotation.experimental.lint.ExperimentalIssueRegistry`) which did not specify the Lint API version it was compiled with.&#xA;&#xA;**This means that the lint checks are likely not compatible.**&#xA;&#xA;If you are the author of this lint check, make your lint `IssueRegistry` class contain&#xA;  override val api: Int = com.android.tools.lint.detector.api.CURRENT_API&#xA;or from Java,&#xA;  @Override public int getApi() { return com.android.tools.lint.detector.api.ApiKt.CURRENT_API; }&#xA;&#xA;If you are just using lint checks from a third party library you have no control over, you can disable these lint checks (if they misbehave) like this:&#xA;&#xA;    android {&#xA;        lintOptions {&#xA;            disable &quot;UnsafeExperimentalUsageError&quot;,&#xA;                    &quot;UnsafeExperimentalUsageWarning&quot;&#xA;        }&#xA;    }&#xA;"
+        category="Lint"
+        priority="10"
+        summary="Obsolete custom lint check"
+        explanation="Lint can be extended with &quot;custom checks&quot;: additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.&#xA;&#xA;The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.&#xA;&#xA;This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.&#xA;&#xA;It may also flag issues found to be using a **newer** version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks."
+        includedVariants="debug"
+        excludedVariants="release">
+        <location
+            file="C:\Users\19356\.gradle\caches\transforms-2\files-2.1\3c4e1ee2723f333527f5983d5c9b73ff\jetified-annotation-experimental-1.0.0\jars\lint.jar"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        severity="Warning"
+        message="The id &quot;logInUserName&quot; in layout &quot;login&quot; is missing from the following layout configurations: layout (present in layout-v26)"
+        category="Correctness"
+        priority="6"
+        summary="Inconsistent Layouts"
+        explanation="This check ensures that a layout resource which is defined in multiple resource folders, specifies the same set of widgets.&#xA;&#xA;This finds cases where you have accidentally forgotten to add a widget to all variations of the layout, which could result in a runtime crash for some resource configurations when a `findViewById()` fails.&#xA;&#xA;There **are** cases where this is intentional. For example, you may have a dedicated large tablet layout which adds some extra widgets that are not present in the phone version of the layout. As long as the code accessing the layout resource is careful to handle this properly, it is valid. In that case, you can suppress this lint check for the given extra or missing views, or the whole layout"
+        errorLine1="        android:id=&quot;@+id/logInUserName&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\layout-v26\login.xml"
+            line="10"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        severity="Warning"
+        message="The id &quot;logInPassword&quot; in layout &quot;login&quot; is missing from the following layout configurations: layout (present in layout-v26)"
+        category="Correctness"
+        priority="6"
+        summary="Inconsistent Layouts"
+        explanation="This check ensures that a layout resource which is defined in multiple resource folders, specifies the same set of widgets.&#xA;&#xA;This finds cases where you have accidentally forgotten to add a widget to all variations of the layout, which could result in a runtime crash for some resource configurations when a `findViewById()` fails.&#xA;&#xA;There **are** cases where this is intentional. For example, you may have a dedicated large tablet layout which adds some extra widgets that are not present in the phone version of the layout. As long as the code accessing the layout resource is careful to handle this properly, it is valid. In that case, you can suppress this lint check for the given extra or missing views, or the whole layout"
+        errorLine1="        android:id=&quot;@+id/logInPassword&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\layout-v26\login.xml"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        severity="Warning"
+        message="The id &quot;logIn&quot; in layout &quot;login&quot; is missing from the following layout configurations: layout (present in layout-v26)"
+        category="Correctness"
+        priority="6"
+        summary="Inconsistent Layouts"
+        explanation="This check ensures that a layout resource which is defined in multiple resource folders, specifies the same set of widgets.&#xA;&#xA;This finds cases where you have accidentally forgotten to add a widget to all variations of the layout, which could result in a runtime crash for some resource configurations when a `findViewById()` fails.&#xA;&#xA;There **are** cases where this is intentional. For example, you may have a dedicated large tablet layout which adds some extra widgets that are not present in the phone version of the layout. As long as the code accessing the layout resource is careful to handle this properly, it is valid. In that case, you can suppress this lint check for the given extra or missing views, or the whole layout"
+        errorLine1="        android:id=&quot;@+id/logIn&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\layout-v26\login.xml"
+            line="40"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        severity="Warning"
+        message="The id &quot;turnToRegister&quot; in layout &quot;login&quot; is missing from the following layout configurations: layout (present in layout-v26)"
+        category="Correctness"
+        priority="6"
+        summary="Inconsistent Layouts"
+        explanation="This check ensures that a layout resource which is defined in multiple resource folders, specifies the same set of widgets.&#xA;&#xA;This finds cases where you have accidentally forgotten to add a widget to all variations of the layout, which could result in a runtime crash for some resource configurations when a `findViewById()` fails.&#xA;&#xA;There **are** cases where this is intentional. For example, you may have a dedicated large tablet layout which adds some extra widgets that are not present in the phone version of the layout. As long as the code accessing the layout resource is careful to handle this properly, it is valid. In that case, you can suppress this lint check for the given extra or missing views, or the whole layout"
+        errorLine1="        android:id=&quot;@+id/turnToRegister&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\layout-v26\login.xml"
+            line="63"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v24`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `drawable`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable-v24"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `layout`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\layout-v26"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 28. Merge all the resources in this folder into `mipmap-anydpi`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.back` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true.">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\back.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.loading` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true.">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\loading.gif"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.profile` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\profile.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.create` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;string name=&quot;create&quot;>Create&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\values\strings.xml"
+            line="15"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.hello` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;string name=&quot;hello&quot;>Hello!&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\values\strings.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.index_page` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;string name=&quot;index_page&quot;>Index page!&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\values\strings.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.view_detail` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
+        errorLine1="    &lt;string name=&quot;view_detail&quot;>View detail&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\values\strings.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GifUsage"
+        severity="Warning"
+        message="Using the `.gif` format for bitmaps is discouraged"
+        category="Usability:Icons"
+        priority="5"
+        summary="Using `.gif` format for bitmaps is discouraged"
+        explanation="The `.gif` file format is discouraged. Consider using `.png` (preferred) or `.jpg` (acceptable) instead."
+        url="http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap"
+        urls="http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\loading.gif"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/add.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\add.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/avatar1.JPG` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\avatar1.JPG"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/back.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\back.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/button_pressed.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\button_pressed.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/button_unpressed.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\button_unpressed.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/history.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\history.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/loading.gif` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\loading.gif"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/my_profile.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\my_profile.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/password.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\password.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/save.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\save.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/search.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\search.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/setting.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\setting.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/time.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\time.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/volunteering_time.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\Study\Course\Project\Volunteering App\app\src\main\res\drawable\volunteering_time.png"/>
+    </issue>
+
+</issues>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/volunteer_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/back">
+
+        <TextView
+            android:id="@+id/volunteer_detail_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/volunteer_detail"
+            android:textSize="30sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <Spinner
+        android:id="@+id/volunteerDetailActivityPrefer"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_selector"
+        android:entries="@array/activity_prefer"
+        android:prompt="@string/select_activity_prefer"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volunteerDetailKeySkills" />
+
+    <TextView
+        android:id="@+id/volunteerDetailEmail"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_selector"
+        android:gravity="start|center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityDetailPassword" />
+
+    <Spinner
+        android:id="@+id/volunteerDetailAgeGroup"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_selector"
+        android:entries="@array/age_group"
+        android:prompt="@string/select_age_group"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volunteerDetailEmail" />
+
+    <Spinner
+        android:id="@+id/volunteerDetailKeySkills"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_selector"
+        android:entries="@array/key_skills"
+        android:prompt="@string/select_key_skills"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volunteerDetailAgeGroup" />
+
+    <TextView
+        android:id="@+id/activityDetailPassword"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_selector"
+        android:gravity="start|center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityDetailUserName" />
+
+    <TextView
+        android:id="@+id/activityDetailUserName"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_selector"
+        android:gravity="start|center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volunteer_detail_toolbar" />
+
+    <Button
+        android:id="@+id/deleteUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/delete_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volunteerDetailActivityPrefer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="age_group">
+        <item>under 16</item>
+        <item>16–18</item>
+        <item>19–24</item>
+        <item>25–35</item>
+        <item>36–49</item>
+        <item>50–64</item>
+        <item>65+</item>
+    </string-array>
+</resources>

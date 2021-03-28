@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Register">
+
+        <EditText
+            android:id="@+id/registerUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:autofillHints="@string/username"
+            android:background="@drawable/register_login_text"
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:autofillHints="@string/password"
+            android:background="@drawable/register_login_text"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/registerUserName"
+            app:layout_constraintStart_toStartOf="@+id/registerUserName"
+            app:layout_constraintTop_toBottomOf="@+id/registerUserName" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/reg_login_button"
+            android:text="@string/register"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="@+id/selectAvailabilityTime"
+            app:layout_constraintStart_toStartOf="@+id/selectAvailabilityTime"
+            app:layout_constraintTop_toBottomOf="@+id/selectAvailabilityTime" />
+
+        <EditText
+            android:id="@+id/confirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:autofillHints="Confirm password"
+            android:background="@drawable/register_login_text"
+            android:ems="10"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/registerPassword"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/registerPassword"
+            app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+
+        <EditText
+            android:id="@+id/registerEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:autofillHints="Email"
+            android:background="@drawable/register_login_text"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textWebEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/confirmPassword"
+            app:layout_constraintStart_toStartOf="@+id/confirmPassword"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
+
+        <Spinner
+            android:id="@+id/selectAgeGroup"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/register_login_text"
+            android:entries="@array/age_group"
+            android:prompt="@string/select_age_group"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/registerEmail"
+            app:layout_constraintStart_toStartOf="@+id/registerEmail"
+            app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
+
+        <Spinner
+            android:id="@+id/selectKeySkills"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/register_login_text"
+            android:entries="@array/key_skills"
+            android:prompt="@string/select_key_skills"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/selectAgeGroup"
+            app:layout_constraintStart_toStartOf="@+id/selectAgeGroup"
+            app:layout_constraintTop_toBottomOf="@+id/selectAgeGroup" />
+
+        <Spinner
+            android:id="@+id/selectActivityPrefer"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/register_login_text"
+            android:entries="@array/activity_prefer"
+            android:prompt="@string/select_activity_prefer"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/selectKeySkills"
+            app:layout_constraintStart_toStartOf="@+id/selectKeySkills"
+            app:layout_constraintTop_toBottomOf="@+id/selectKeySkills" />
+
+        <Spinner
+            android:id="@+id/selectAvailabilityTime"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/register_login_text"
+            android:entries="@array/availability_time"
+            android:prompt="@string/select_availability_time"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/selectActivityPrefer"
+            app:layout_constraintStart_toStartOf="@+id/selectActivityPrefer"
+            app:layout_constraintTop_toBottomOf="@+id/selectActivityPrefer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

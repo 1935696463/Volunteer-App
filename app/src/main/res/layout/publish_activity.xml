@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/publishAgeGroup"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:entries="@array/age_group"
+            android:prompt="@string/select_age_group"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/publishNumberOfVolunteersNeeded"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="@+id/publishNumberOfVolunteersNeeded"
+            app:layout_constraintTop_toBottomOf="@+id/publishNumberOfVolunteersNeeded" />
+
+        <Spinner
+            android:id="@+id/publishCategory"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:entries="@array/activity_prefer"
+            android:prompt="@string/select_category"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="@+id/publishAgeGroup"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/publishAgeGroup"
+            app:layout_constraintTop_toBottomOf="@+id/publishAgeGroup" />
+
+        <EditText
+            android:id="@+id/publishTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:autofillHints="@string/auto_fill_hints"
+            android:ems="10"
+            android:hint="@string/title"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/publishLocation"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/auto_fill_hints"
+            android:ems="10"
+            android:hint="@string/location"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/publishTitle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/publishTitle"
+            app:layout_constraintTop_toBottomOf="@+id/publishTitle" />
+
+        <TextView
+            android:id="@+id/publishTime"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/please_select_date"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/publishLocation"
+            app:layout_constraintStart_toStartOf="@+id/publishLocation"
+            app:layout_constraintTop_toBottomOf="@+id/publishLocation" />
+
+        <EditText
+            android:id="@+id/publishDetail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/auto_fill_hints"
+            android:ems="10"
+            android:hint="@string/detail"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/publishTime"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="@+id/publishTime"
+            app:layout_constraintTop_toBottomOf="@+id/publishTime" />
+
+        <EditText
+            android:id="@+id/publishNumberOfVolunteersNeeded"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/auto_fill_hints"
+            android:ems="10"
+            android:hint="@string/needed_volunteers_number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/publishDetail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/publishDetail"
+            app:layout_constraintTop_toBottomOf="@+id/publishDetail" />
+
+        <EditText
+            android:id="@+id/publishOtherRequirements"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/auto_fill_hints"
+            android:ems="10"
+            android:hint="@string/other_requirements"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/publishTimeRequired"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/publishTimeRequired"
+            app:layout_constraintTop_toBottomOf="@+id/publishTimeRequired" />
+
+        <EditText
+            android:id="@+id/publishTimeRequired"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/auto_fill_hints"
+            android:ems="10"
+            android:hint="@string/time_required_hours"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/publishCategory"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="@+id/publishCategory"
+            app:layout_constraintTop_toBottomOf="@+id/publishCategory" />
+
+        <Button
+            android:id="@+id/publishActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/publish"
+            app:layout_constraintEnd_toEndOf="@+id/publishOtherRequirements"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/publishOtherRequirements"
+            app:layout_constraintTop_toBottomOf="@+id/publishOtherRequirements" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
